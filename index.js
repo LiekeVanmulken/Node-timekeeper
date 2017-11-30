@@ -14,8 +14,12 @@ const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
 
 wss.on('connection', function connection(ws, req) {
-    setInterval(function () {
-        ws.send(JSON.stringify({time: `${moment().format('h:mm:ss')}:${moment().milliseconds()}`}))
+    let i = setInterval(function () {
+        try {
+            ws.send(JSON.stringify({time: `${moment().format('h:mm:ss')}:${moment().milliseconds()}`}));
+        } catch (error) {
+            clearInterval(i);
+        }
     }, 100);
 });
 
