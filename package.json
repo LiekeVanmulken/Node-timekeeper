@@ -1,0 +1,9 @@
+{
+  "name": "TimeInNode",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "latest",
+    "moment": "^2.19.3",
+    "ws": "latest"
+  }
+}
