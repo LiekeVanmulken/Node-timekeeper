@@ -8,11 +8,10 @@
             width: 100vh;
             height: 100vh;
 
-            margin: auto auto;
-            margin-left: 0px;
+            margin: auto auto auto 0;
 
             font-size: 20em;
-            font-family: Arial;
+            font-family: Arial,monospace;
         }
     </style>
 </head>
@@ -23,7 +22,7 @@
 
 <script type="text/javascript">
     const time = document.getElementById('time-text');
-    const ws = new WebSocket('wss://timekeeper.teunwillems.nl', []);
+    const ws = new WebSocket('ws://localhost:8080', []);
     // When the connection is open, send some data to the server
     ws.onopen = function () {
 	console.log("Connected to web server");       
