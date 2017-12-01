@@ -1,3 +1,4 @@
+declare type Set = {};
 import * as express from "express";
 import * as http from "http";
 import * as url from "url";

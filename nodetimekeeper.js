@@ -1,7 +1,9 @@
-import * as express from "express";
-import * as http from "http";
-import * as ws from "ws";
-import * as moment from "moment";
+"use strict";
+exports.__esModule = true;
+var express = require("express");
+var http = require("http");
+var ws = require("ws");
+var moment = require("moment");
 var app = express();
 app.use(function (req, res) {
     res.sendFile(__dirname + '/index.html');
